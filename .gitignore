@@ -1,0 +1,6 @@
+# Output pengujian (screenshot, ekspor frame, build link uji). Dibuat ulang oleh tools/*.mjs.
+out/
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
