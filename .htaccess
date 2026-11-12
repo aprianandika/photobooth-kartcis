@@ -1,0 +1,15 @@
+# Kartcis Frame on Hostinger (LiteSpeed reads Apache .htaccess rules).
+# Only the photobooth page itself is public: index.html, app.js, frames.js, chars/, assets/.
+
+# No folder listings (e.g. /assets/ or /chars/).
+Options -Indexes
+
+RewriteEngine On
+
+# Test and sample folders from the repo, plus the README: 403 Forbidden.
+RewriteRule ^(tools|artifact|contoh|out)(/|$) - [F]
+RewriteRule ^README\.md$ - [F]
+
+# Hidden files and folders (.git, .gitignore). /.well-known/ stays open for the free SSL certificate check.
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule (^|/)\. - [F]

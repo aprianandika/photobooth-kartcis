@@ -31,6 +31,12 @@ Fitur halaman:
 
 Folder `tools\`, `artifact\`, `contoh\`, dan `out\` hanya untuk pengujian atau contoh, tidak perlu diupload.
 
+`.htaccess` (untuk Hostinger/Apache/LiteSpeed):
+- Kalau seluruh repo ikut ter-deploy (misalnya lewat Git di hPanel), file ini memblokir folder uji dan contoh, `README.md`, serta file tersembunyi seperti `.git`. Semuanya dijawab 403.
+- File ini juga mematikan daftar isi folder.
+- `/.well-known/` tetap terbuka supaya SSL gratis bisa terpasang.
+- Kalau upload manual lewat File Manager, ikutkan juga file `.htaccess` ini. File ini tersembunyi, jadi aktifkan "show hidden files".
+
 ## Cara pakai (untuk penonton)
 
 1. Buka link, izinkan kamera.
